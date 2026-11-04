@@ -211,20 +211,10 @@ body.no-scroll { overflow: hidden; }
 .dot { width: 8px; height: 8px; border-radius: 50%; background: #7AA36B; box-shadow: 0 0 0 4px rgba(122, 163, 107, .2); }
 
 /* ---------- Identificação ---------- */
-.identify { background: var(--white); padding-block: 4rem; }
-.identify__inner { max-width: 860px; text-align: center; }
-.identify .section-title { margin-bottom: 1.1rem; }
-.identify__lead { max-width: 36rem; margin: 0 auto 2.25rem; font-size: 1.05rem; color: var(--ink-soft); }
-.chips { display: grid; grid-template-columns: 1fr 1fr; gap: .75rem; text-align: left; }
-.chips li {
-  display: flex; align-items: center; gap: .7rem;
-  padding: .9rem 1rem; border-radius: var(--radius-sm); background: var(--beige);
-  font-size: .92rem; font-weight: 500; line-height: 1.35; color: var(--olive-deep);
-}
-.chips li::before {
-  content: ""; width: 22px; height: 22px; border-radius: 50%; flex-shrink: 0;
-  background: var(--white) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%239C7D47' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M6 12.5l4 4 8-9'/%3E%3C/svg%3E") center / 12px no-repeat;
-}
+.identify { background: var(--white); padding-block: 4.5rem; }
+.identify__grid { display: grid; gap: .5rem 4rem; }
+.identify__text { font-size: 1.05rem; color: var(--ink-soft); }
+.identify__highlight { font-family: var(--serif); font-weight: 500; font-size: 1.6rem; line-height: 1.25; color: var(--olive-deep); margin-bottom: .6rem; }
 .ticks { display: grid; gap: 0; border-top: 1px solid var(--line); margin-top: 1rem; }
 @media (min-width: 960px) { .ticks:not(.ticks--single) { grid-template-columns: 1fr 1fr; column-gap: 2rem; } }
 .ticks li {
@@ -548,9 +538,10 @@ body.no-scroll { overflow: hidden; }
   .hero__media { width: 100%; max-width: 460px; justify-self: end; }
   .hero__badge { left: -2.25rem; }
 
-  .identify { padding-block: 6rem; }
-  .chips { grid-template-columns: repeat(4, 1fr); }
-  .chips li { flex-direction: column; align-items: flex-start; padding: 1.1rem 1.1rem 1.2rem; }
+  .identify { padding-block: 6.5rem; }
+  .identify__grid { grid-template-columns: 1fr 1fr; align-items: center; }
+  .identify__grid .section-title { grid-row: span 2; margin-bottom: 0; }
+  .identify__highlight { font-size: 1.85rem; }
 
   .method__grid { grid-template-columns: .95fr 1.05fr; gap: 6rem; }
   .plate__note { font-size: 1.15rem; }
